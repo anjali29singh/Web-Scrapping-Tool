@@ -6,7 +6,8 @@ crawler_settings = Settings({
     'DEPTH_LIMIT': 2,  # Set the depth limit for crawling
     'ROBOTSTXT_OBEY': True,  # Obey robots.txt rules
     'ITEM_PIPELINES': {
-        'scrapper.scrapper.JSONWriterPipeline': 1,  # Enable the JSON writer pipeline
+
+        'scrapper.scrapper.JSONWriterPipeline': 100, 
     },
     'FEEDS': {
         'output.jsonl': {
@@ -14,6 +15,7 @@ crawler_settings = Settings({
             'overwrite': True,  # Overwrite the file if it exists
         },
     },
+   
         
 
 })
